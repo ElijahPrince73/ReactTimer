@@ -105,10 +105,10 @@
 
 	var Main = __webpack_require__(229);
 	//Load Foundation
-	__webpack_require__(230);
+	__webpack_require__(231);
 
 	//App CSS
-	__webpack_require__(234);
+	__webpack_require__(235);
 
 	$(document).foundation();
 
@@ -25479,24 +25479,26 @@
 /* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
+	var Navigation = __webpack_require__(230);
 
 	var Main = function Main(props) {
 	  return React.createElement(
-	    'div',
+	    "div",
 	    null,
 	    React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(
-	        'div',
+	        "div",
 	        null,
+	        React.createElement(Navigation, null),
 	        React.createElement(
-	          'p',
+	          "p",
 	          null,
-	          'Main.jsx Rendered'
+	          "Main.jsx Rendered"
 	        ),
 	        props.children
 	      )
@@ -25510,13 +25512,84 @@
 /* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	var _require = __webpack_require__(166),
+	    Link = _require.Link,
+	    IndexLink = _require.IndexLink;
+
+	var Navigation = function Navigation() {
+	  return React.createElement(
+	    'div',
+	    { className: 'top-bar' },
+	    React.createElement(
+	      'div',
+	      { className: 'top-bar-left' },
+	      React.createElement(
+	        'ul',
+	        { className: 'menu' },
+	        React.createElement(
+	          'li',
+	          { className: 'menu-text' },
+	          'React Timer App'
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          ' ',
+	          React.createElement(
+	            IndexLink,
+	            { to: '/', activeClassname: 'active-link' },
+	            'Timer'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/', activeClassname: 'active-link' },
+	            'Countdown'
+	          )
+	        )
+	      )
+	    ),
+	    React.createElement(
+	      'div',
+	      { className: 'top-bar-right' },
+	      React.createElement(
+	        'div',
+	        { className: 'menu' },
+	        React.createElement(
+	          'li',
+	          { className: 'menu-text' },
+	          'Created By Elijah ',
+	          React.createElement(
+	            'a',
+	            { href: 'http://elijahtheprince.com/', target: '_blank' },
+	            ' Prince'
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+	module.exports = Navigation;
+
+/***/ }),
+/* 231 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(231);
+	var content = __webpack_require__(232);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(233)(content, {});
+	var update = __webpack_require__(234)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -25533,10 +25606,10 @@
 	}
 
 /***/ }),
-/* 231 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(232)();
+	exports = module.exports = __webpack_require__(233)();
 	// imports
 
 
@@ -25547,7 +25620,7 @@
 
 
 /***/ }),
-/* 232 */
+/* 233 */
 /***/ (function(module, exports) {
 
 	/*
@@ -25603,7 +25676,7 @@
 
 
 /***/ }),
-/* 233 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -25857,16 +25930,16 @@
 
 
 /***/ }),
-/* 234 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(235);
+	var content = __webpack_require__(236);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(233)(content, {});
+	var update = __webpack_require__(234)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -25883,15 +25956,15 @@
 	}
 
 /***/ }),
-/* 235 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(232)();
+	exports = module.exports = __webpack_require__(233)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "p {\n  color: black; }\n", ""]);
+	exports.push([module.id, ".top-bar {\n  background: #333333; }\n  .top-bar ul {\n    background: #333333; }\n\n.menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.menu-text {\n  color: white; }\n", ""]);
 
 	// exports
 
